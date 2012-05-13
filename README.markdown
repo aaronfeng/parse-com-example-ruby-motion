@@ -8,7 +8,7 @@ https://parse.com/apps/quickstart
 # Run Example
 
 Download parse SDK for existing ios project.
-Copy Parse.framework into app/vendor.
+Copy Parse.framework into vendor.
 
 Add your api and client key in app/app_delegate.rb.
 
@@ -16,7 +16,7 @@ Add your api and client key in app/app_delegate.rb.
 
 # Note
 
-In the current version of RubyMotion (1.2) a minor modification is required
+In the current version of RubyMotion (1.3) a minor modification is required
 for parse SDK to work.
 
     vi /Library/RubyMotion/lib/motion/project/vendor.rb
@@ -29,3 +29,6 @@ To:
 
     source_files = (opts.delete(:source_files) or Dir.glob('**/*.{c,m,cpp,cxx,mm,h}'))
 
+and then run
+
+    > rake clean
